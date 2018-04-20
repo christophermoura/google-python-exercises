@@ -24,7 +24,6 @@
 # So donuts(5) returns 'Number of donuts: 5'
 # and donuts(23) returns 'Number of donuts: many'
 def donuts(count):
-    # +++your code here+++
     if count < 10:
         message = "Number of donuts: " + str(count)
     elif count >= 10:
@@ -38,8 +37,11 @@ def donuts(count):
 # so 'spring' yields 'spng'. However, if the string length
 # is less than 2, return instead the empty string.
 def both_ends(s):
-    # +++your code here+++
-    return
+    if len(s) >= 2:
+        result = s[:2] + s[-2:]
+    elif len(s) < 2:
+        result = ""
+    return result
 
 
 # C. fix_start
