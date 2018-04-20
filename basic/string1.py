@@ -37,8 +37,11 @@ def donuts(count):
 # so 'spring' yields 'spng'. However, if the string length
 # is less than 2, return instead the empty string.
 def both_ends(s):
-    # +++your code here+++
-    return
+    if len(s) >= 2:
+        result = s[:2] + s[-2:]
+    elif len(s) < 2:
+        result = ""
+    return result
 
 
 # C. fix_start
