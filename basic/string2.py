@@ -2,7 +2,8 @@
 # Copyright 2010 Google Inc.
 # Licensed under the Apache License, Version 2.0
 # http://www.apache.org/licenses/LICENSE-2.0
-
+import re
+import math
 # Google's Python Class
 # http://code.google.com/edu/languages/google-python-class/
 
@@ -37,7 +38,6 @@ def verbing(s):
 # Return the resulting string.
 # So 'This dinner is not that bad!' yields:
 # This dinner is good!
-import re
 def not_bad(s):
     if (re.search("not.*bad", s)) is not None:
         exp = re.search("not.*bad", s)
@@ -53,8 +53,7 @@ def not_bad(s):
 # Given 2 strings, a and b, return a string of the form
 #  a-front + b-front + a-back + b-back
 def front_back(a, b):
-    # +++your code here+++
-    return
+    return a[:math.ceil(len(a)/2)] + b[:math.ceil(len(b)/2)] + a[math.ceil(len(a)/2):] + b[math.ceil(len(b)/2):]
 
 
 # Simple provided test() function used in main() to print
