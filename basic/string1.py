@@ -24,11 +24,12 @@
 # So donuts(5) returns 'Number of donuts: 5'
 # and donuts(23) returns 'Number of donuts: many'
 def donuts(count):
+    message = "Number of donuts: {}"
     if count < 10:
-        message = "Number of donuts: " + str(count)
+        quantity = str(count)
     elif count >= 10:
-        message = "Number of donuts: many"
-    return message
+        quantity = "many"
+    return message.format(quantity)
 
 
 # B. both_ends
