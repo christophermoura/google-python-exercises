@@ -62,7 +62,7 @@ def front_back(a, b):
     def back(s):
         return s[mid(s):]
 
-    return front(a) + front(b) + back(a) + back(b)
+    return ''.join([front(a), front(b), back(a), back(b)])
 
 
 # Simple provided test() function used in main() to print
