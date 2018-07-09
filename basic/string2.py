@@ -53,16 +53,11 @@ def not_bad(s):
 # Given 2 strings, a and b, return a string of the form
 #  a-front + b-front + a-back + b-back
 def front_back(a, b):
-    def mid(s):
-        return math.ceil(len(s) / 2.0)
+    mid = lambda s: math.ceil(len(s) / 2.0)
+    front = lambda s: s[:mid(s)]
+    back = lambda s: s[mid(s):]
 
-    def front(s):
-        return s[:mid(s)]
-
-    def back(s):
-        return s[mid(s):]
-
-    return front(a) + front(b) + back(a) + back(b)
+    return ''.join([front(a), front(b), back(a), back(b)])
 
 
 # Simple provided test() function used in main() to print
